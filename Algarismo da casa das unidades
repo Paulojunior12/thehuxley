@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    int entrada,saida;
+    scanf("%d",&entrada);
+    saida=entrada%10;
+    printf("%d", saida);
+    
+	return 0;
+}

@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+  int altura=0, dHorizontal=0, fv = 0, frente=0, tras=0;
+  char movimento;
+  int i;
+  int comandos=0;
+  
+  scanf("%d", &comandos); 
+  for(i=0; i< comandos; ++i){
+    scanf(" %c", &movimento); //S, D, F,V 
+    dHorizontal = frente + tras;
+
+    if (movimento == 'S'&& altura < 200 && dHorizontal < 2000)
+      altura += 10;
+    
+    else if (movimento == 'D' && altura > 0 && altura < 200 && dHorizontal < 2000)
+      altura -= 10;
+
+    else if (movimento =='F' && altura > 0 && fv%2==0 && altura < 200 && dHorizontal < 2000){
+      if (tras>0)
+        tras-=10;
+      else
+        frente +=10;
+    } 
+    else if (movimento =='F' && altura > 0 && fv%2==1 && altura < 200 && dHorizontal < 2000){
+      if(frente>0)
+        frente -=10;
+      else
+        tras+=10;
+    } 
+    else if (movimento =='V' && altura > 0 && altura < 200 && dHorizontal < 2000){
+      if (fv%2 == 0) 
+        frente+=10;
+      if (fv%2 == 1) 
+        tras -=10;
+        ++fv;
+    }
+  }
+  dHorizontal = frente + tras;
+  printf("%d %d", altura, dHorizontal);
+
+  return 0;
+}

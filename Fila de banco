@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main () {
+  	int n, m, k, u;
+    int fila, contM = 0, contN = 0;
+    int i, j = 0;
+    scanf("%d %d %d", &n, &m, &k);
+    int senha1[n];
+    int senha2[m];
+    for (fila = 0; fila < n; fila++) {
+      scanf("%d", &senha1[fila]);
+    }
+    for (fila = 0; fila < m; fila++) {
+      scanf("%d", &senha2[fila]);
+    }
+    u = n + m;
+	int fila_unica[u];
+	for (i=0; i < u; i++){
+		fila_unica[i] = 0;
+	}
+	if (k == 1){
+		while ( j != u){
+			if (contM != m){
+				fila_unica[j] = senha2[contM];
+				contM++;
+				j++;
+			}
+			if (contN != n){
+				fila_unica[j] = senha1[contN];
+				contN++;
+				j++;
+			}
+		}
+	} else if (k == 2){
+		while ( j  != u ){
+			if (contN != n ){
+				fila_unica[j] = senha1 [contN];
+				contN++;
+				j++;
+			}
+			if (contM != m){
+				fila_unica[j] = senha2 [contM];
+				contM++;
+				j++;
+			}
+		}
+	}
+	for(i=0; i < u; i++){
+		printf("%d\n", fila_unica[i]);
+	}
+
+	return 0;
+}

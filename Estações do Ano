@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+void EstacaoAno(int dia, int mes){
+char est[10];
+if(mes == 9 && dia >= 21 || mes > 9 && mes <12 || mes == 12 && dia < 20){
+ strcpy(est, "PRIMAVERA");}
+else if(mes == 12 && dia >= 21 || mes < 3 || mes == 3 && dia < 20){
+strcpy(est, "VERAO");}
+else if(mes == 3 && dia >= 21 || mes > 3 && mes < 6 || mes == 6 && dia <= 20){
+strcpy(est, "OUTONO");}
+else if(mes == 6 && dia >= 21 || mes > 6 && mes < 9 || mes == 9 && dia <= 20){
+strcpy(est, "INVERNO");}
+printf("%s\n", est);
+}
+
+
+int main(){
+int dia, mes;
+scanf("%d %d", &dia, &mes);
+
+EstacaoAno(dia, mes);
+
+return 0;
+}

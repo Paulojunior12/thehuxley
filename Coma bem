@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float gasto,valor_total;
+    scanf("%f",&gasto);
+    valor_total=gasto*1.10;
+    printf("%.2f",valor_total);
+	return 0;
+}

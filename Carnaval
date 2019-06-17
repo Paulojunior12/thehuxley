@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main(void){
+
+float N1,N2,N3,N4,N5,aux,i,soma;
+do
+    {
+        scanf("%f %f %f %f %f",&N1,&N2,&N3,&N4,&N5);
+}while(N1<5 || N1>10 || N2<5 || N2>10 || N3<5 || N3>10 || N4<5 || N4>10 || N5<5 || N5>10);
+for(i=0;i<25;i++){
+if(N1>N2){
+    aux=N2;
+    N2=N1;
+    N1=aux;
+}
+if(N2>N3){
+    aux=N3;
+    N3=N2;
+    N2=aux;
+}
+if(N3>N4){
+    aux=N4;
+    N4=N3;
+    N3=aux;
+}
+if(N4>N5){
+    aux=N5;
+    N5=N4;
+    N4=aux;
+}
+
+}
+soma= N2+N3+N4;
+
+printf("%.1f",soma);
+return(0);
+}

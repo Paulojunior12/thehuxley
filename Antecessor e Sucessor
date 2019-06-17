@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+int main(){
+int ant,suc,n;
+
+scanf("%d",&n);
+scanf("%d",&n);
+suc=n+1;
+ant=n-1;
+printf ("%d %d",ant,suc);
+return (0);
+}

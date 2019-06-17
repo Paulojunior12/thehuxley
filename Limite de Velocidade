@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+float CalculaMulta(int vel)
+{
+float multa = 0;
+
+if(vel > 50 && vel <= 55)
+multa = 230;
+
+if(vel > 55 && vel <= 60)
+multa = 340;
+
+if(vel > 60)
+multa = (vel - 50) * 19.28;
+
+return multa;
+}
+
+int main()
+{
+int vel;
+
+scanf("%d", &vel);
+
+printf("%.2f\n", CalculaMulta(vel));
+
+
+return 0;
+}

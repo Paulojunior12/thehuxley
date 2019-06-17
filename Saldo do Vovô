@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+	int N, S1,S2, S, i, mov, menor,deposito1;
+	scanf("%d %d", &N, &S, &S2);
+	menor = S;
+	S2 = S;
+	for (i=N; i>0; i--) {
+		scanf("%d", &mov);
+		S +=mov;
+		if(i == N)
+        	deposito1 = S;
+		if (menor >= S)
+		menor = S;
+	}
+	//printf("%d", menor);
+
+	if(menor != S2)
+		printf("%d\n", menor);
+	else
+	printf("%d\n", deposito1);
+
+return 0;
+} 

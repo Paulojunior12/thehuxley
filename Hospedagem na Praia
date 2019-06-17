@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<string.h>
+
+float CalculaHospedagem(char tipo[13], int dias)
+{
+float valor, total;
+if(!strcasecmp(tipo, "individual"))
+valor =  125;
+if(!strcasecmp(tipo, "su�te dupla"))
+valor =  140;
+if(!strcasecmp(tipo, "su�te tripla"))
+valor =  180;
+
+total = dias * valor;
+
+return total;
+}
+
+int main()
+{
+char tipo[13];
+int dias;
+float desconto = 0, total;
+
+
+
+scanf("%[^\n]s", tipo);
+setbuf(stdin, NULL);
+
+scanf("%d", &dias);
+
+total = CalculaHospedagem(tipo, dias);
+
+if(dias >= 3)
+desconto = total * 15 / 100;
+
+printf("%.2f\n", total - desconto);
+
+return 0;
+}

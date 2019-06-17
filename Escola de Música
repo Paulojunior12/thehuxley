@@ -1,0 +1,32 @@
+void ClassificaAluno(float media, int faltas)
+{
+char sit[25];
+
+if(media >= 9.5 && faltas <= 10)
+strcpy(sit, "APROVADO COM LOUVOR");
+
+if(media >= 7 && media <= 9.5 && faltas <= 10)
+strcpy(sit, "APROVADO");
+
+if(media < 7 && faltas <= 10)
+strcpy(sit, "REPROVADO");
+
+if(faltas > 10)
+strcpy(sit, "REPROVADO POR FALTAS");
+
+printf("%s\n", sit);
+
+}
+
+int main()
+{
+float media;
+int faltas;
+
+scanf("%f", &media);
+scanf("%d", &faltas);
+
+ClassificaAluno(media, faltas);
+
+return 0;
+}

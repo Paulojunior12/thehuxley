@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main (){
+   
+   int x, parteA, parteB;
+   int resultado;
+   for(;;){
+      scanf("%d", &x);
+      parteA = (x / 100);
+      parteB = (x%100);
+      resultado = (parteA + parteB);
+      
+      if (x < 1000 || x > 9999)
+      break;
+      
+      else if (resultado * resultado == x)
+      printf("propriedade do 3025!\n");
+      
+      else 
+      printf("numero comum\n");
+      
+   }
+  
+   return 0;
+}
+   

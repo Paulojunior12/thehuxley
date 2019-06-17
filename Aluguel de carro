@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    double dia,km,total,total2;
+    scanf("%lf",&dia);
+    scanf("%lf",&km);
+    total=(dia*30+km*0.01)*0.9;
+    printf("%.2lf \n",total);
+	return 0;
+}

@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int soma_digito(int num){
+    int a,b;
+    
+    //Atribui��o do valor do ultimo digito do n�mero � vari�vel "a".
+    a = num%10; 
+    
+    //Remo��o o ultimo d�gito do n�mero "num" e atribui o novo valor para "b"
+    b = (num - a)/10;
+    
+    //Testa se o n�mero ainda tem mais algum d�gito ou n�o. Se n�o tiver, ent�o � retornado s� o valor do pr�prio d�gito.
+    if (b <= 0){
+          return a;
+          }
+    else {
+    // Se tiver mais algum d�gito. Soma o valor do �ltimo n�mero ao pr�ximo ultimo n�mero.
+          return a + soma_digito(b); 
+         }
+    }
+main(){
+       int n;
+
+      
+      
+       
+       scanf ("%d",&n);
+       printf ("%d",soma_digito(n));
+       return 0;
+       }

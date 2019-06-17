@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    float x,y;
+
+    
+   
+    scanf("%f",&x);
+    scanf("%f",&y);
+   
+    if((x>0)&&(y>0))
+    printf("primeiro");
+    
+    else if((x<0)&&(y>0))
+      printf("segundo");
+    
+      else if((x<0)&&(y<0))
+        printf("terceiro");
+      
+        else if((x>0)&&(y<0))
+          printf("quarto");
+        
+          else if((x==0)&&((y>0||y<0)))
+            printf("eixo y\n",x,y);
+          
+            else if((y==0)&&((x>0||x<0)))
+              printf("eixo x\n",x,y);
+            
+              else if((x==0)&&(y==0))
+                printf("origem\n\n",x,y);
+              
+            
+
+
+    	return 0;
+
+}

@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+    double area,b,c;
+    scanf("%lf",&b);
+    c=b/100;
+    area=(pow(c,2))*3.14159;
+    printf("Area = %.4lf",area);
+    return 0;
+}

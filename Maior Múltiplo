@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+    
+    int M, N, maior=0, cont=0, x;
+    
+    scanf("%d", &M);
+    scanf("%d", &N);
+    
+    if ((M > N) || (N == 0) || (M == 0)){
+          
+          printf("sem multiplos menores que %d\n", N);
+          
+    }
+    else {
+    
+      for(x = 1; x <= N; x++){
+        
+          if (x % M == 0){
+            
+              cont = cont + 1;
+            
+              if (x >= maior){
+                
+                  maior = x;
+              }
+              if (cont == 0){
+            
+                printf("sem multiplos menores que %d\n", N);
+              }
+          }
+        
+      }
+      if (cont != 0){
+    
+        printf("%d\n", maior);
+    
+      }
+    } 
+
+	return 0;
+}

@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+
+int main(){
+    int n, m, count, qtd = 0;
+    scanf("%d%d", &n, &m);
+    
+    
+    count  = n;
+    while (count <= m){
+        if (count % 5 == 0)
+        qtd++;
+        count++;
+    }
+qtd--;
+
+for(count  = n; count <= m; count++){
+    if (count % 5 == 0)
+    
+    printf("%d", count);
+    
+    if(count % 5 ==   00 && qtd !=0){
+      printf("|");  
+      qtd--;
+    }
+}
+
+return 0;
+}
